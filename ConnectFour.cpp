@@ -18,7 +18,7 @@ int main()
 
     // Ask the player if X or O should go first
     // TODO change this to coin flip or loser of last round
-    // TODO ask for player names
+    // TODO ask for player names, associate name with X and O
 
     cout << "Which player should go first? X or O?" << endl;
     cin >> firstPlayer;
@@ -83,4 +83,6 @@ void ConnectFour::Play()
         board.print();
         cout << "Draw!" << endl;
     }
+    //TODO play again? Keep track of round score
+
 }

@@ -219,6 +219,9 @@ Result Board::gameState(int WinCond)
 
 void Board::print() // Prints board to screen
 {
+    //TODO clear screen
+    //TODO animate player move
+
     cout << " 0 1 2 3 4 5 6" << endl;
 
     for (int i=0; i<6; i++)
