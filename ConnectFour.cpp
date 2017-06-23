@@ -49,16 +49,30 @@ void ConnectFour::Play()
 
     while (board.gameState(WinCond) == UNFINISHED) // While game is ongoing
     {
-        board.print(); // Print the board
-
         // Ask player which column
+        system("clear");
         cout << "Player " << PlayerTurn
-             << ": which column would you like to place your disc?" << endl;
+             << ": which column would you like to place your disc?" << endl
+             << "Please enter a number 0-6 followed by [enter]" << endl << endl;
+        board.print();
         cin >> Column;
+
+        // TODO verify Column is an int
+
+        while (Column < 0 || Column > 6)
+        {
+            system("clear");
+            cout << "Error. Please enter a number 0-6 followed by [enter]" << endl << endl << endl;
+            board.print();
+            cin >> Column;
+        }
+
 
         while (board.makeMove(Column, PlayerTurn) == false) // If column is full
         {
-            cout << "That column is full, please choose another." << endl;
+            system("clear");
+            cout << "That column is full, please choose another." << endl << endl << endl;
+            board.print();
             cin >> Column;
         }
 
