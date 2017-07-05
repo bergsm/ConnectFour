@@ -49,8 +49,11 @@ void ConnectFour::Play()
 
     while (board.gameState(WinCond) == UNFINISHED) // While game is ongoing
     {
+
+        // Clear Screen
+        for (int i=0; i<10; i++)
+            cout << endl;
         // Ask player which column
-        system("clear");
         cout << "Player " << PlayerTurn
              << ": which column would you like to place your disc?" << endl
              << "Please enter a number 0-6 followed by [enter]" << endl << endl;
